@@ -31,7 +31,7 @@ var GetHandler = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request){ 
 	w.Write([]byte("This is GET request.\n"))
 })
 
-// curl -H "Content-Type: application/x-www-form-urlencoded" -X POST -d 'name=Chandler' http://localhost:3000/post/
+// curl -H "Content-Type: application/x-www-form-urlencoded" -X POST -d 'name=Chandler' http://localhost:8091/post/
 var PostHandler = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request){ // http://localhost:8091/post/ - Simple POST request -- accepts form data 'name'.
 	r.ParseForm()
 	name := r.FormValue("name")
